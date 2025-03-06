@@ -24,59 +24,91 @@ cd mcp-servers
 
 echo.
 echo Installing Puppeteer MCP Server...
-git clone https://github.com/anthropics/mcp-puppeteer.git puppeteer
-cd puppeteer
+git clone https://github.com/modelcontextprotocol/servers.git modelcontextprotocol
+cd modelcontextprotocol
+git checkout puppeteer
 npm install
 cd ..
+mkdir puppeteer
+xcopy /E /I /Y modelcontextprotocol\* puppeteer\
+rmdir /S /Q modelcontextprotocol
 
 echo.
 echo Installing Memory MCP Server...
-git clone https://github.com/anthropics/mcp-memory.git memory
-cd memory
+git clone https://github.com/modelcontextprotocol/servers.git modelcontextprotocol
+cd modelcontextprotocol
+git checkout memory
 npm install
 cd ..
+mkdir memory
+xcopy /E /I /Y modelcontextprotocol\* memory\
+rmdir /S /Q modelcontextprotocol
 
 echo.
 echo Installing Filesystem MCP Server...
-git clone https://github.com/anthropics/mcp-filesystem.git filesystem
-cd filesystem
+git clone https://github.com/modelcontextprotocol/servers.git modelcontextprotocol
+cd modelcontextprotocol
+git checkout filesystem
 npm install
 cd ..
+mkdir filesystem
+xcopy /E /I /Y modelcontextprotocol\* filesystem\
+rmdir /S /Q modelcontextprotocol
 
 echo.
 echo Installing GitHub MCP Server...
-git clone https://github.com/anthropics/mcp-github.git github
-cd github
+git clone https://github.com/modelcontextprotocol/servers.git modelcontextprotocol
+cd modelcontextprotocol
+git checkout github
 npm install
 cd ..
+mkdir github
+xcopy /E /I /Y modelcontextprotocol\* github\
+rmdir /S /Q modelcontextprotocol
 
 echo.
 echo Installing Weather MCP Server...
-git clone https://github.com/anthropics/mcp-weather.git weather
-cd weather
+git clone https://github.com/modelcontextprotocol/servers.git modelcontextprotocol
+cd modelcontextprotocol
+git checkout weather
 npm install
 cd ..
+mkdir weather
+xcopy /E /I /Y modelcontextprotocol\* weather\
+rmdir /S /Q modelcontextprotocol
 
 echo.
 echo Installing Brave Search MCP Server...
-git clone https://github.com/anthropics/mcp-brave-search.git brave-search
-cd brave-search
+git clone https://github.com/modelcontextprotocol/servers.git modelcontextprotocol
+cd modelcontextprotocol
+git checkout brave-search
 npm install
 cd ..
+mkdir brave-search
+xcopy /E /I /Y modelcontextprotocol\* brave-search\
+rmdir /S /Q modelcontextprotocol
 
 echo.
 echo Installing Fetch MCP Server...
-git clone https://github.com/anthropics/mcp-fetch.git fetch
-cd fetch
+git clone https://github.com/modelcontextprotocol/servers.git modelcontextprotocol
+cd modelcontextprotocol
+git checkout fetch
 npm install
 cd ..
+mkdir fetch
+xcopy /E /I /Y modelcontextprotocol\* fetch\
+rmdir /S /Q modelcontextprotocol
 
 echo.
 echo Installing Desktop Commander MCP Server...
-git clone https://github.com/anthropics/mcp-desktop-commander.git desktop-commander
-cd desktop-commander
+git clone https://github.com/modelcontextprotocol/servers.git modelcontextprotocol
+cd modelcontextprotocol
+git checkout desktop-commander
 npm install
 cd ..
+mkdir desktop-commander
+xcopy /E /I /Y modelcontextprotocol\* desktop-commander\
+rmdir /S /Q modelcontextprotocol
 
 echo.
 echo Installation Complete!
