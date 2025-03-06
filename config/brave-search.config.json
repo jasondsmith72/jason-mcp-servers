@@ -1,0 +1,11 @@
+{
+  "port": 3005,
+  "host": "localhost",
+  "apiKey": "YOUR_BRAVE_SEARCH_API_KEY",
+  "maxResults": 20,
+  "timeout": 30000,
+  "logging": {
+    "level": "info",
+    "file": "./logs/brave-search.log"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "port": 3004,
+  "host": "localhost",
+  "apiKey": "YOUR_WEATHER_API_KEY",
+  "defaultUnits": "metric",
+  "cacheTime": 1800,
+  "logging": {
+    "level": "info",
+    "file": "./logs/weather.log"
+  }
+}

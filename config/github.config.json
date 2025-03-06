@@ -1,0 +1,13 @@
+{
+  "port": 3003,
+  "host": "localhost",
+  "timeout": 60000,
+  "logging": {
+    "level": "info",
+    "file": "./logs/github.log"
+  },
+  "rateLimits": {
+    "maxRequests": 5000,
+    "perHour": 3600
+  }
+}

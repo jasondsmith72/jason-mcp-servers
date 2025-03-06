@@ -1,0 +1,22 @@
+{
+  "port": 3007,
+  "host": "localhost",
+  "allowedCommands": [
+    "ls",
+    "dir",
+    "cat",
+    "type",
+    "python",
+    "node"
+  ],
+  "blockedCommands": [
+    "rm -rf",
+    "del /s",
+    "format"
+  ],
+  "timeout": 30000,
+  "logging": {
+    "level": "info",
+    "file": "./logs/desktop-commander.log"
+  }
+}
