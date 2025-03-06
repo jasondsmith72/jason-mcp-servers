@@ -1,0 +1,14 @@
+{
+  "port": 3001,
+  "host": "localhost",
+  "database": {
+    "type": "sqlite",
+    "path": "./memory.db"
+  },
+  "logging": {
+    "level": "info",
+    "file": "./logs/memory.log"
+  },
+  "maxEntities": 10000,
+  "maxRelations": 50000
+}
