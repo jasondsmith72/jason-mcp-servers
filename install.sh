@@ -21,93 +21,96 @@ fi
 mkdir -p mcp-servers
 cd mcp-servers
 
+# Clone the main MCP servers repository
 echo
-echo "Installing Puppeteer MCP Server..."
-git clone https://github.com/modelcontextprotocol/servers.git modelcontextprotocol
-cd modelcontextprotocol
-git checkout puppeteer
+echo "Cloning the Model Context Protocol servers repository..."
+git clone https://github.com/modelcontextprotocol/servers.git
+cd servers
 npm install
 cd ..
-mkdir -p puppeteer
-cp -R modelcontextprotocol/* puppeteer/
-rm -rf modelcontextprotocol
 
 echo
-echo "Installing Memory MCP Server..."
-git clone https://github.com/modelcontextprotocol/servers.git modelcontextprotocol
-cd modelcontextprotocol
-git checkout memory
-npm install
-cd ..
-mkdir -p memory
-cp -R modelcontextprotocol/* memory/
-rm -rf modelcontextprotocol
+echo "Setting up individual MCP servers..."
 
+# Set up Puppeteer MCP Server
 echo
-echo "Installing Filesystem MCP Server..."
-git clone https://github.com/modelcontextprotocol/servers.git modelcontextprotocol
-cd modelcontextprotocol
-git checkout filesystem
+echo "Setting up Puppeteer MCP Server..."
+mkdir -p puppeteer/src
+cp -R servers/src/puppeteer puppeteer/src/
+cp servers/package.json puppeteer/
+cd puppeteer
 npm install
 cd ..
-mkdir -p filesystem
-cp -R modelcontextprotocol/* filesystem/
-rm -rf modelcontextprotocol
 
+# Set up Memory MCP Server
 echo
-echo "Installing GitHub MCP Server..."
-git clone https://github.com/modelcontextprotocol/servers.git modelcontextprotocol
-cd modelcontextprotocol
-git checkout github
+echo "Setting up Memory MCP Server..."
+mkdir -p memory/src
+cp -R servers/src/memory memory/src/
+cp servers/package.json memory/
+cd memory
 npm install
 cd ..
-mkdir -p github
-cp -R modelcontextprotocol/* github/
-rm -rf modelcontextprotocol
 
+# Set up Filesystem MCP Server
 echo
-echo "Installing Weather MCP Server..."
-git clone https://github.com/modelcontextprotocol/servers.git modelcontextprotocol
-cd modelcontextprotocol
-git checkout weather
+echo "Setting up Filesystem MCP Server..."
+mkdir -p filesystem/src
+cp -R servers/src/filesystem filesystem/src/
+cp servers/package.json filesystem/
+cd filesystem
 npm install
 cd ..
-mkdir -p weather
-cp -R modelcontextprotocol/* weather/
-rm -rf modelcontextprotocol
 
+# Set up GitHub MCP Server
 echo
-echo "Installing Brave Search MCP Server..."
-git clone https://github.com/modelcontextprotocol/servers.git modelcontextprotocol
-cd modelcontextprotocol
-git checkout brave-search
+echo "Setting up GitHub MCP Server..."
+mkdir -p github/src
+cp -R servers/src/github github/src/
+cp servers/package.json github/
+cd github
 npm install
 cd ..
-mkdir -p brave-search
-cp -R modelcontextprotocol/* brave-search/
-rm -rf modelcontextprotocol
 
+# Set up Weather MCP Server
 echo
-echo "Installing Fetch MCP Server..."
-git clone https://github.com/modelcontextprotocol/servers.git modelcontextprotocol
-cd modelcontextprotocol
-git checkout fetch
+echo "Setting up Weather MCP Server..."
+mkdir -p weather/src
+cp -R servers/src/weather weather/src/
+cp servers/package.json weather/
+cd weather
 npm install
 cd ..
-mkdir -p fetch
-cp -R modelcontextprotocol/* fetch/
-rm -rf modelcontextprotocol
 
+# Set up Brave Search MCP Server
 echo
-echo "Installing Desktop Commander MCP Server..."
-git clone https://github.com/modelcontextprotocol/servers.git modelcontextprotocol
-cd modelcontextprotocol
-git checkout desktop-commander
+echo "Setting up Brave Search MCP Server..."
+mkdir -p "brave-search/src"
+cp -R servers/src/brave-search "brave-search/src/"
+cp servers/package.json "brave-search/"
+cd "brave-search"
 npm install
 cd ..
-mkdir -p desktop-commander
-cp -R modelcontextprotocol/* desktop-commander/
-rm -rf modelcontextprotocol
+
+# Set up Fetch MCP Server
+echo
+echo "Setting up Fetch MCP Server..."
+mkdir -p fetch/src
+cp -R servers/src/fetch fetch/src/
+cp servers/package.json fetch/
+cd fetch
+npm install
+cd ..
+
+# Set up Desktop Commander MCP Server
+echo
+echo "Setting up Desktop Commander MCP Server..."
+mkdir -p "desktop-commander/src"
+cp -R servers/src/desktop-commander "desktop-commander/src/"
+cp servers/package.json "desktop-commander/"
+cd "desktop-commander"
+npm install
+cd ..
 
 echo
 echo "Making start script executable..."
