@@ -15,7 +15,13 @@ This repository contains setup and configuration files for various Model Context
 
 ## Installation
 
-The `install.sh` (for Linux/Mac) and `install.bat` (for Windows) scripts will help you set up all the MCP servers in this repository.
+The `install.sh` (for Linux/Mac) and `install.bat` (for Windows) scripts will help you set up all the MCP servers in this repository. These scripts now fetch servers from the official Model Context Protocol organization repository at [https://github.com/modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers).
+
+The installation scripts will:
+1. Clone the main repository
+2. Checkout the appropriate branch for each server
+3. Install dependencies
+4. Set up each server in its own directory
 
 ## Requirements
 
@@ -26,7 +32,11 @@ The `install.sh` (for Linux/Mac) and `install.bat` (for Windows) scripts will he
 
 ## Configuration
 
-See the individual server directories for specific configuration options.
+See the individual server directories for specific configuration options. The `config` directory contains default configurations for all servers that you can customize according to your needs.
+
+## Environment Variables
+
+Copy the `.env.template` file to `.env` and fill in your API keys and other required credentials before starting the servers.
 
 ## License
 
