@@ -102,13 +102,14 @@ cd fetch
 npm install
 cd ..
 
-# Set up Desktop Commander MCP Server
+# Set up Desktop Commander MCP Server from separate repository
 echo
 echo "Setting up Desktop Commander MCP Server..."
-mkdir -p "desktop-commander/src"
-cp -R servers/src/desktop-commander "desktop-commander/src/"
-cp servers/package.json "desktop-commander/"
-cd "desktop-commander"
+mkdir -p desktop-commander
+git clone https://github.com/wonderwhy-er/ClaudeComputerCommander.git desktop-commander-temp
+cp -R desktop-commander-temp/* desktop-commander/
+rm -rf desktop-commander-temp
+cd desktop-commander
 npm install
 cd ..
 
