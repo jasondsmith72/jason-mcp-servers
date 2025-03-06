@@ -51,10 +51,18 @@ The Model Context Protocol servers repository has all servers in a single reposi
 
 ## Requirements
 
-- Node.js (v16 or higher)
-- Git
-- Python 3.8+ (for some servers)
-- Docker (optional, for containerized deployment)
+- **Node.js** (v16 or higher) - [https://nodejs.org/](https://nodejs.org/)
+- **Git** - [https://git-scm.com/](https://git-scm.com/)
+- **Python** (3.8+ for some servers) - [https://www.python.org/downloads/](https://www.python.org/downloads/)
+- **Docker** (optional, for containerized deployment) - [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/)
+
+## API Requirements
+
+Some MCP servers require API keys to function properly:
+
+- **GitHub API** - [https://github.com/settings/tokens](https://github.com/settings/tokens)
+- **Weather API** - [https://openweathermap.org/api](https://openweathermap.org/api) or similar service
+- **Brave Search API** - [https://brave.com/search/api/](https://brave.com/search/api/)
 
 ## Configuration
 
