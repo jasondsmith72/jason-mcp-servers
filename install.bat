@@ -22,93 +22,96 @@ REM Create base directory
 mkdir mcp-servers 2>nul
 cd mcp-servers
 
+REM Clone the main MCP servers repository
 echo.
-echo Installing Puppeteer MCP Server...
-git clone https://github.com/modelcontextprotocol/servers.git modelcontextprotocol
-cd modelcontextprotocol
-git checkout puppeteer
+echo Cloning the Model Context Protocol servers repository...
+git clone https://github.com/modelcontextprotocol/servers.git
+cd servers
 npm install
 cd ..
-mkdir puppeteer
-xcopy /E /I /Y modelcontextprotocol\* puppeteer\
-rmdir /S /Q modelcontextprotocol
 
 echo.
-echo Installing Memory MCP Server...
-git clone https://github.com/modelcontextprotocol/servers.git modelcontextprotocol
-cd modelcontextprotocol
-git checkout memory
-npm install
-cd ..
-mkdir memory
-xcopy /E /I /Y modelcontextprotocol\* memory\
-rmdir /S /Q modelcontextprotocol
+echo Setting up individual MCP servers...
 
+REM Set up Puppeteer MCP Server
 echo.
-echo Installing Filesystem MCP Server...
-git clone https://github.com/modelcontextprotocol/servers.git modelcontextprotocol
-cd modelcontextprotocol
-git checkout filesystem
+echo Setting up Puppeteer MCP Server...
+mkdir puppeteer 2>nul
+xcopy /E /I /Y servers\src\puppeteer puppeteer\src\puppeteer\
+copy servers\package.json puppeteer\package.json
+cd puppeteer
 npm install
 cd ..
-mkdir filesystem
-xcopy /E /I /Y modelcontextprotocol\* filesystem\
-rmdir /S /Q modelcontextprotocol
 
+REM Set up Memory MCP Server
 echo.
-echo Installing GitHub MCP Server...
-git clone https://github.com/modelcontextprotocol/servers.git modelcontextprotocol
-cd modelcontextprotocol
-git checkout github
+echo Setting up Memory MCP Server...
+mkdir memory 2>nul
+xcopy /E /I /Y servers\src\memory memory\src\memory\
+copy servers\package.json memory\package.json
+cd memory
 npm install
 cd ..
-mkdir github
-xcopy /E /I /Y modelcontextprotocol\* github\
-rmdir /S /Q modelcontextprotocol
 
+REM Set up Filesystem MCP Server
 echo.
-echo Installing Weather MCP Server...
-git clone https://github.com/modelcontextprotocol/servers.git modelcontextprotocol
-cd modelcontextprotocol
-git checkout weather
+echo Setting up Filesystem MCP Server...
+mkdir filesystem 2>nul
+xcopy /E /I /Y servers\src\filesystem filesystem\src\filesystem\
+copy servers\package.json filesystem\package.json
+cd filesystem
 npm install
 cd ..
-mkdir weather
-xcopy /E /I /Y modelcontextprotocol\* weather\
-rmdir /S /Q modelcontextprotocol
 
+REM Set up GitHub MCP Server
 echo.
-echo Installing Brave Search MCP Server...
-git clone https://github.com/modelcontextprotocol/servers.git modelcontextprotocol
-cd modelcontextprotocol
-git checkout brave-search
+echo Setting up GitHub MCP Server...
+mkdir github 2>nul
+xcopy /E /I /Y servers\src\github github\src\github\
+copy servers\package.json github\package.json
+cd github
 npm install
 cd ..
-mkdir brave-search
-xcopy /E /I /Y modelcontextprotocol\* brave-search\
-rmdir /S /Q modelcontextprotocol
 
+REM Set up Weather MCP Server
 echo.
-echo Installing Fetch MCP Server...
-git clone https://github.com/modelcontextprotocol/servers.git modelcontextprotocol
-cd modelcontextprotocol
-git checkout fetch
+echo Setting up Weather MCP Server...
+mkdir weather 2>nul
+xcopy /E /I /Y servers\src\weather weather\src\weather\
+copy servers\package.json weather\package.json
+cd weather
 npm install
 cd ..
-mkdir fetch
-xcopy /E /I /Y modelcontextprotocol\* fetch\
-rmdir /S /Q modelcontextprotocol
 
+REM Set up Brave Search MCP Server
 echo.
-echo Installing Desktop Commander MCP Server...
-git clone https://github.com/modelcontextprotocol/servers.git modelcontextprotocol
-cd modelcontextprotocol
-git checkout desktop-commander
+echo Setting up Brave Search MCP Server...
+mkdir brave-search 2>nul
+xcopy /E /I /Y servers\src\brave-search brave-search\src\brave-search\
+copy servers\package.json brave-search\package.json
+cd brave-search
 npm install
 cd ..
-mkdir desktop-commander
-xcopy /E /I /Y modelcontextprotocol\* desktop-commander\
-rmdir /S /Q modelcontextprotocol
+
+REM Set up Fetch MCP Server
+echo.
+echo Setting up Fetch MCP Server...
+mkdir fetch 2>nul
+xcopy /E /I /Y servers\src\fetch fetch\src\fetch\
+copy servers\package.json fetch\package.json
+cd fetch
+npm install
+cd ..
+
+REM Set up Desktop Commander MCP Server
+echo.
+echo Setting up Desktop Commander MCP Server...
+mkdir desktop-commander 2>nul
+xcopy /E /I /Y servers\src\desktop-commander desktop-commander\src\desktop-commander\
+copy servers\package.json desktop-commander\package.json
+cd desktop-commander
+npm install
+cd ..
 
 echo.
 echo Installation Complete!
