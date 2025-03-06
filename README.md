@@ -11,11 +11,14 @@ This repository contains setup and configuration files for various Model Context
 5. **weather** - Weather information service
 6. **brave_search** - Brave search API integration
 7. **fetch** - URL fetching and web content retrieval
-8. **desktopCommander** - Desktop command execution
+8. **desktopCommander** - Desktop command execution (from [wonderwhy-er/ClaudeComputerCommander](https://github.com/wonderwhy-er/ClaudeComputerCommander))
 
 ## Installation
 
-The `install.sh` (for Linux/Mac) and `install.bat` (for Windows) scripts will help you set up all the MCP servers in this repository. These scripts fetch servers from the official Model Context Protocol organization repository at [https://github.com/modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers).
+The `install.sh` (for Linux/Mac) and `install.bat` (for Windows) scripts will help you set up all the MCP servers in this repository. These scripts fetch servers from:
+
+- The official Model Context Protocol organization repository at [https://github.com/modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers) for most servers
+- The ClaudeComputerCommander repository at [https://github.com/wonderwhy-er/ClaudeComputerCommander](https://github.com/wonderwhy-er/ClaudeComputerCommander) for the desktop-commander server
 
 The installation scripts will:
 1. Clone the main repository
@@ -30,6 +33,7 @@ The Model Context Protocol servers repository has all servers in a single reposi
 2. Create separate directories for each server
 3. Copy the appropriate server code to each directory
 4. Set up dependencies for each server
+5. For the desktop-commander server, we get it from a separate repository
 
 ## Requirements
 
