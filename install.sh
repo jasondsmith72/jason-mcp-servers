@@ -23,59 +23,91 @@ cd mcp-servers
 
 echo
 echo "Installing Puppeteer MCP Server..."
-git clone https://github.com/anthropics/mcp-puppeteer.git puppeteer
-cd puppeteer
+git clone https://github.com/modelcontextprotocol/servers.git modelcontextprotocol
+cd modelcontextprotocol
+git checkout puppeteer
 npm install
 cd ..
+mkdir -p puppeteer
+cp -R modelcontextprotocol/* puppeteer/
+rm -rf modelcontextprotocol
 
 echo
 echo "Installing Memory MCP Server..."
-git clone https://github.com/anthropics/mcp-memory.git memory
-cd memory
+git clone https://github.com/modelcontextprotocol/servers.git modelcontextprotocol
+cd modelcontextprotocol
+git checkout memory
 npm install
 cd ..
+mkdir -p memory
+cp -R modelcontextprotocol/* memory/
+rm -rf modelcontextprotocol
 
 echo
 echo "Installing Filesystem MCP Server..."
-git clone https://github.com/anthropics/mcp-filesystem.git filesystem
-cd filesystem
+git clone https://github.com/modelcontextprotocol/servers.git modelcontextprotocol
+cd modelcontextprotocol
+git checkout filesystem
 npm install
 cd ..
+mkdir -p filesystem
+cp -R modelcontextprotocol/* filesystem/
+rm -rf modelcontextprotocol
 
 echo
 echo "Installing GitHub MCP Server..."
-git clone https://github.com/anthropics/mcp-github.git github
-cd github
+git clone https://github.com/modelcontextprotocol/servers.git modelcontextprotocol
+cd modelcontextprotocol
+git checkout github
 npm install
 cd ..
+mkdir -p github
+cp -R modelcontextprotocol/* github/
+rm -rf modelcontextprotocol
 
 echo
 echo "Installing Weather MCP Server..."
-git clone https://github.com/anthropics/mcp-weather.git weather
-cd weather
+git clone https://github.com/modelcontextprotocol/servers.git modelcontextprotocol
+cd modelcontextprotocol
+git checkout weather
 npm install
 cd ..
+mkdir -p weather
+cp -R modelcontextprotocol/* weather/
+rm -rf modelcontextprotocol
 
 echo
 echo "Installing Brave Search MCP Server..."
-git clone https://github.com/anthropics/mcp-brave-search.git brave-search
-cd brave-search
+git clone https://github.com/modelcontextprotocol/servers.git modelcontextprotocol
+cd modelcontextprotocol
+git checkout brave-search
 npm install
 cd ..
+mkdir -p brave-search
+cp -R modelcontextprotocol/* brave-search/
+rm -rf modelcontextprotocol
 
 echo
 echo "Installing Fetch MCP Server..."
-git clone https://github.com/anthropics/mcp-fetch.git fetch
-cd fetch
+git clone https://github.com/modelcontextprotocol/servers.git modelcontextprotocol
+cd modelcontextprotocol
+git checkout fetch
 npm install
 cd ..
+mkdir -p fetch
+cp -R modelcontextprotocol/* fetch/
+rm -rf modelcontextprotocol
 
 echo
 echo "Installing Desktop Commander MCP Server..."
-git clone https://github.com/anthropics/mcp-desktop-commander.git desktop-commander
-cd desktop-commander
+git clone https://github.com/modelcontextprotocol/servers.git modelcontextprotocol
+cd modelcontextprotocol
+git checkout desktop-commander
 npm install
 cd ..
+mkdir -p desktop-commander
+cp -R modelcontextprotocol/* desktop-commander/
+rm -rf modelcontextprotocol
 
 echo
 echo "Making start script executable..."
