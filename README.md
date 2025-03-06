@@ -25,6 +25,20 @@ The installation scripts will:
 2. Set up each server in its own directory with the necessary dependencies
 3. Install all required npm packages
 
+## Uninstallation
+
+If you need to remove the MCP servers, you can use the provided uninstallation scripts:
+
+- For Windows: Run `uninstall.bat`
+- For Linux/Mac: Run `uninstall.sh`
+
+These scripts will:
+1. Warn you about what will be removed
+2. Ask for confirmation before proceeding
+3. Stop any running MCP server processes
+4. Remove all MCP server directories
+5. Optionally remove the entire mcp-servers directory
+
 ## Server Structure
 
 The Model Context Protocol servers repository has all servers in a single repository under the `src` directory. Our installation scripts:
